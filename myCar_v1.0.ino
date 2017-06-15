@@ -31,10 +31,14 @@ void loop()
 	Serial.print("ultrasonic = ");
 	Serial.println(ultrasonic);
 	Serial.print("but_or_man = ");
-	if(info.but_or_man == MANHOLE)
-		Serial.println("MANHOLE");
-	else if(info.but_or_man == BUTHOLE)
-		Serial.println("BUTHOLE");
+	if(info.but_or_man == MANHOLE || info.but_or_man == BUTHOLE)
+	{
+		char str_log[10],str_lat[10] ;
+		SKM53_GPS_location(char * str_log, char* str_lat);
+		////str log and str lat are now available
+		//GPS code goes here ..
+		//http_send(str_log, str_lat, 
+	}
 	else if(info.but_or_man == IDLE)
 		Serial.println("IDLE");
 	Serial.println("\n\n*****************************\n\n");
