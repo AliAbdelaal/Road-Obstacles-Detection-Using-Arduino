@@ -36,7 +36,7 @@ void loop()
 		char str_log[10],str_lat[10] ;
 		SKM53_GPS_location(char * str_log, char* str_lat);
 		////str log and str lat are now available
-		//GPS code goes here ..
+		//GSM code goes here ..
 		//http_send(str_log, str_lat, 
 	}
 	else if(info.but_or_man == IDLE)
